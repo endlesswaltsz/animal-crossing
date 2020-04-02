@@ -1,7 +1,7 @@
 import axios from 'axios'
 // import { Message } from 'element-ui'
 
-const BACKEND_ENDPOINT = 'http://localhost/api/v1'
+const BACKEND_ENDPOINT = 'http://47.114.5.253/api/v1'
 
 axios.interceptors.request.use(
     config => {

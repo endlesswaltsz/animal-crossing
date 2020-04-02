@@ -1,0 +1,17 @@
+version: '3.3'
+services: 
+    frontend:
+        networks: 
+            - web
+        build:  ./frontend
+        ports: 
+        - 80:80
+    backend:
+        networks: 
+            - web
+        build:  ./web
+        ports:
+        - 8000:8000
+networks:
+    web:
+        driver: overlay

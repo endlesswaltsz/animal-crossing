@@ -3,5 +3,5 @@ WORKDIR /data
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 COPY . .
-RUN ./manage.py migrate
+RUN python manage.py migrate
 CMD ["gunicorn", "web.wsgi", "-b", "0.0.0.0:8000", "-w", "1"]

@@ -3,13 +3,15 @@ services:
     frontend:
         networks: 
             - web
-        build:  ./frontend
+        # build:  ./frontend
+        image: :animal-crossing_frontend:lastest
         ports: 
         - 80:80
     backend:
         networks: 
             - web
-        build:  ./web
+        # build:  ./web
+        image: animal-crossing_backend:lastest
         ports:
         - 8000:8000
 networks:
